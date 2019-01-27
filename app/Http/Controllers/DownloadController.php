@@ -16,24 +16,10 @@ use Illuminate\Http\Request;
 
 class DownloadController extends Controller
 {
-    /**
-     * @var DeliveryClient
-     */
     private $client;
-    /**
-     * @var Renderer
-     */
     private $renderer;
-    /**
-     * @var \Contentful\Core\File\ImageOptions
-     */
     private $options;
 
-    /**
-     * DownloadController constructor.
-     * @param DeliveryClient $client
-     * @param Renderer $renderer
-     */
     public function __construct(DeliveryClient $client, Renderer $renderer)
     {
         $this->client = $client;
@@ -56,9 +42,6 @@ class DownloadController extends Controller
         return view('downloads',['title' => 'Download','downloads' => $downloads]);
     }
 
-    /**
-     * @param $id
-     */
     public function download($id)
     {
 

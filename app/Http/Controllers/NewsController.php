@@ -18,11 +18,6 @@ class NewsController extends Controller
     private $options;
     private $renderer;
 
-    /**
-     * NewsController constructor.
-     * @param DeliveryClient $client
-     * @param Renderer $renderer
-     */
     public function __construct(DeliveryClient $client, Renderer $renderer)
     {
         $this->client = $client;
@@ -34,17 +29,30 @@ class NewsController extends Controller
     }
 
 
+
     /**
      * @param $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function showNews($id)
     {
-        $entry = $this->client->getEntry($id);
-
-        if (!$entry) {
-            abort(404);
+        try {
+        	//$entry = $this->client->getEntry($id);
+            $query = new \Contentful\Delivery\Query();
+            $query->setContentType('news')
+            ->where('fields.slug',$id);
+            $entries = $this->client->getEntries($query);
+            if ($entries->count() > 0)
+                $entry = $entries[0];
+            else return redirect(route('home'), 301);
         }
+
+        catch (\Contentful\Core\Exception\BadRequestException $exception) {
+        	//if (!$entry) {
+            	abort(404, 'Leider wurde der Inhalt nicht gefunden. Wahrscheinlich rufen Sie einen veralteten Link auf.');
+        	//}
+        }
+
+        
 
         $options = (new \Contentful\Core\File\ImageOptions())
             ->setFormat('jpg')
@@ -55,7 +63,6 @@ class NewsController extends Controller
 
     /**
      * @param Request $request
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function showNewsCategory(Request $request)
     {

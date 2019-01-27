@@ -37,7 +37,7 @@
                                     @foreach($entry->team as $team)
                                     <li>
                                         <h5>Team</h5>
-                                        <a href="{{ route('team.show',['id' => $team->getSystemProperties()->getId()]) }}"><span>{{ $team->getMannschaft() }}</span></a>
+                                        <a href="{{ route('team.show',['id' => $team->getSlug()]) }}"><span>{{ $team->getMannschaft() }}</span></a>
                                     </li>
                                     @endforeach
                                         @if($entry->getTelefon())

@@ -19,11 +19,6 @@ class PersonController extends Controller
     private $options;
     private $renderer;
 
-    /**
-     * PersonController constructor.
-     * @param DeliveryClient $client
-     * @param Renderer $renderer
-     */
     public function __construct(DeliveryClient $client, Renderer $renderer)
     {
         $this->client = $client;
@@ -34,16 +29,23 @@ class PersonController extends Controller
         parent::__construct($client);
     }
 
-    /**
-     * @param $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function show($id)
     {
-        $entry = $this->client->getEntry($id);
+        try {
+            //$entry = $this->client->getEntry($id);
+            $query = new \Contentful\Delivery\Query();
+            $query->setContentType('person')
+            ->where('fields.slug',$id);
+            $entries = $this->client->getEntries($query);
+            if ($entries->count() > 0)
+                $entry = $entries[0];
+            else abort(404, 'Leider wurde der Inhalt nicht gefunden. Wahrscheinlich rufen Sie einen veralteten Link auf.');
+        }
 
-        if (!$entry) {
-            abort(404);
+        catch (\Contentful\Core\Exception\BadRequestException $exception) {
+            //if (!$entry) {
+                abort(404, 'Leider wurde der Inhalt nicht gefunden. Wahrscheinlich rufen Sie einen veralteten Link auf.');
+            //}
         }
         $query = new \Contentful\Delivery\Query();
         $query->setContentType('news');

@@ -7,6 +7,10 @@
     home
 @endsection
 
+@section('description')
+        {{ str_limit(strip_tags($renderer->render($entry->getBeschreibung())), $limit = 150, $end = '...') }}    
+@stop
+
 @section('content')
     <div class="ritekhed-main-content">
         <div class="ritekhed-main-section">

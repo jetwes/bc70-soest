@@ -18,7 +18,7 @@ Route::get('/','HomepageController@index')->name('home');
 Route::get('/teams/{id}','TeamController@showTeam')->name('team.show');
 Route::get('/teams','TeamController@teams')->name('teams');
 
-Route::get('/camps/{id}','TournamentController@show')->name('camp.show');
+Route::get('/camps/{id}','CampController@showCamp')->name('camp.show');
 
 Route::get('/news/{id}','NewsController@showNews')->name('news.show');
 Route::get('/news','NewsController@showNewsCategory')->name('news.showCategory');

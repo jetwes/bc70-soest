@@ -34,9 +34,6 @@ class StaticSiteController extends Controller
         parent::__construct($client);
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function kinder()
     {
         $entry = $this->getSingleEntry('Kinder+Sport Academy');
@@ -46,9 +43,6 @@ class StaticSiteController extends Controller
         return view('static_site',['title' => $entry->getTitel(),'entry' => $entry,'renderer' => $this->renderer,'options' => $this->options]);
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function bc70()
     {
         $entry = $this->getSingleEntry('BC70 Academy');
@@ -58,9 +52,6 @@ class StaticSiteController extends Controller
         return view('static_site',['title' => $entry->getTitel(),'entry' => $entry,'renderer' => $this->renderer,'options' => $this->options]);
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function showVerein()
     {
         $entry = $this->getSingleEntry('Verein');
@@ -71,9 +62,6 @@ class StaticSiteController extends Controller
         return view('static_site',['title' => $entry->getTitel(),'entry' => $entry,'renderer' => $this->renderer,'options' => $this->options,'picture' => $picture]);
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function showVorstand()
     {
         $entry = $this->getSingleEntry('Vorstand');
@@ -91,9 +79,6 @@ class StaticSiteController extends Controller
         return view('static_site',['title' => $entry->getTitel(),'entry' => $entry,'renderer' => $this->renderer,'options' => $this->options, 'personen' => $vorstand]);
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function showSchiedsrichter()
     {
         $entry = $this->getSingleEntry('Schiedsrichter');
@@ -106,9 +91,6 @@ class StaticSiteController extends Controller
         return view('static_site',['title' => $entry->getTitel(),'entry' => $entry,'renderer' => $this->renderer,'options' => $this->options,'picture' => $picture]);
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function showTrainer()
     {
         $entry = $this->getSingleEntry('Trainer');

@@ -77,15 +77,15 @@
                             <ul class="row draggable">
                                 @foreach($news as $news_item)
                                     <li class="col-md-3">
-                                        <figure style="min-height: 262px;"><a href="{{ route('news.show',['id' => $news_item->getSystemProperties()->getId()]) }}"><img src="{{ $news_item->getBild()->getFile()->getUrl($options) }}" alt=""> <span class="ritekhed-blog-hover"><i class="fa fa-link ritekhed-bgcolor"></i></span> </a></figure>
+                                        <figure style="min-height: 262px;"><a href="{{ route('news.show',['id' => $news_item->getSlug()]) }}"><img src="{{ $news_item->getBild()->getFile()->getUrl($options) }}" alt=""> <span class="ritekhed-blog-hover"><i class="fa fa-link ritekhed-bgcolor"></i></span> </a></figure>
                                         <div class="ritekhed-blog-grid-text ritekhed-border-color" style="min-height: 320px;">
                                             <ul>
                                                 <li><i class="far fa-user"></i> <a href="#">Webteam</a></li>
                                                 <li><i class="far fa-calendar-alt"></i> {{ $news_item->getSystemProperties()->getCreatedAt()->format('d.m.Y') }}</li>
                                             </ul>
-                                            <h2><a href="{{ route('news.show',['id' => $news_item->getSystemProperties()->getId()]) }}">{{ $news_item->titel }}</a></h2>
+                                            <h2><a href="{{ route('news.show',['id' => $news_item->getSlug()]) }}">{{ $news_item->titel }}</a></h2>
                                             <p>@markdown($news_item->vorschau)</p>
-                                            <a href="{{ route('news.show',['id' => $news_item->getSystemProperties()->getId()]) }}" class="ritekhed-blog-grid-btn ritekhed-bgcolor">Mehr lesen</a>
+                                            <a href="{{ route('news.show',['id' => $news_item->getSlug()]) }}" class="ritekhed-blog-grid-btn ritekhed-bgcolor">Mehr lesen</a>
                                         </div>
                                     </li>
                                 @endforeach
@@ -220,12 +220,12 @@
                                 @foreach($vorstand as $single_vorstand)
                                     @if($single_vorstand->getBild())
                                     <li class="col-md-3">
-                                        <figure style="max-height: 220px;" ><a href="{{ route('person.show',['id' => $single_vorstand->getSystemProperties()->getId()]) }}">
+                                        <figure style="max-height: 220px;" ><a href="{{ route('person.show',['id' => $single_vorstand->getSlug()]) }}">
                                                     <img src="{{ $single_vorstand->getBild()->getFile()->getUrl() }}" alt="{{ $single_vorstand->name }}">
                                                     <i class="fa fa-link"></i></a><span></span></figure>
                                         <div class="ritekhed-player-grid-text">
-                                            <a href="{{ route('person.show',['id' => $single_vorstand->getSystemProperties()->getId()]) }}" class="forward-btn">{{ $single_vorstand->getPosition() }}</a>
-                                            <h5><a href="{{ route('person.show',['id' => $single_vorstand->getSystemProperties()->getId()]) }}">{{ $single_vorstand->name }}</a></h5>
+                                            <a href="{{ route('person.show',['id' => $single_vorstand->getSlug()]) }}" class="forward-btn">{{ $single_vorstand->getPosition() }}</a>
+                                            <h5><a href="{{ route('person.show',['id' => $single_vorstand->getSlug()]) }}">{{ $single_vorstand->name }}</a></h5>
                                             <p></p>
                                         </div>
                                         <ul class="ritekhed-player-grid-social">

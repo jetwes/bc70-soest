@@ -7,6 +7,10 @@
     home
 @endsection
 
+@section('description')
+        {{ str_limit(strip_tags($renderer->render($entry->getBeschreibung())), $limit = 150, $end = '...') }}    
+@stop
+
 @section('content')
     <div class="ritekhed-main-content">
         <div class="ritekhed-main-section">
@@ -42,7 +46,7 @@
                                 <h3>Trainer</h3>
                                 @foreach($entry->getTrainer() as $trainer)
                                     <div>
-                                        <a href="{{ route('person.show',['id' => $trainer->getSystemProperties()->getId()]) }}">{{ $trainer->getName() }}</a><br>
+                                        <a href="{{ route('person.show',['id' => $trainer->getSlug()]) }}">{{ $trainer->getName() }}</a><br>
                                         @if($trainer->getBild())
                                             <img class="img-thumbnail" src="{{ $trainer->getBild()->getFile()->getUrl($options) }}" alt="Bild {{ $trainer->getName() }}">
                                         @endif
@@ -69,7 +73,7 @@
                                     @foreach($news as $news_entry)
                                         <li class="col-md-3">
                                             @if($news_entry->getBild())
-                                                <figure style="min-height: 262px;"><a href="#"><img src="{{ $news_entry->getBild()->getFile()->getUrl($options) }}" alt="{{ $news_entry->getBild()->getTitle() }}">
+                                                <figure style="min-height: 262px;"><a href="{{ route('news.show',['id' => $news_entry->getSlug()]) }}"><img src="{{ $news_entry->getBild()->getFile()->getUrl($options) }}" alt="{{ $news_entry->getBild()->getTitle() }}">
                                                         <span class="ritekhed-blog-hover"><i class="fa fa-link ritekhed-bgcolor"></i></span> </a>
                                                 </figure>
                                             @endif
@@ -77,9 +81,9 @@
                                                 <ul>
                                                     <li><i class="far fa-calendar-alt"></i> {{ $news_entry->getSystemProperties()->getCreatedAt()->format('d.m.Y') }}</li>
                                                 </ul>
-                                                <h2><a href="{{ route('news.show',['id' => $news_entry->getSystemProperties()->getId()]) }}">{{ $news_entry->getTitel() }}</a></h2>
+                                                <h2><a href="{{ route('news.show',['id' => $news_entry->getSlug()]) }}">{{ $news_entry->getTitel() }}</a></h2>
                                                 <p>{{ $news_entry->getVorschau() }}</p>
-                                                <a href="#" class="ritekhed-blog-grid-btn ritekhed-bgcolor">Mehr lesen</a>
+                                                <a href="{{ route('news.show',['id' => $news_entry->getSlug()]) }}" class="ritekhed-blog-grid-btn ritekhed-bgcolor">Mehr lesen</a>
                                             </div>
                                         </li>
                                     @endforeach

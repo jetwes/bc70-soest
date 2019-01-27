@@ -16,15 +16,8 @@ use Spatie\Menu\Laravel\Facades\Menu;
 class HomepageController extends Controller
 {
 
-    /**
-     * @var DeliveryClient
-     */
     protected $client;
 
-    /**
-     * HomepageController constructor.
-     * @param DeliveryClient $client
-     */
     public function __construct(DeliveryClient $client)
     {
         $this->client = $client;

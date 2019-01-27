@@ -3,6 +3,15 @@
     <title>{{ $title }} | BC70 Soest e.V.</title>
 @stop
 
+@section('description')
+    @if($entry->getSystemProperties()->getContentType()->getName() == 'News')
+        {{ str_limit($entry->getVorschau(),150) }}
+    @endif
+    @if($entry->getSystemProperties()->getContentType()->getName() == 'Seite')
+        {{ str_limit(strip_tags($renderer->render($entry->getInhalt())), $limit = 150, $end = '...') }}    
+    @endif
+@stop
+
 @section('body_class')
     home
 @endsection
@@ -44,7 +53,7 @@
                                     <ul class="row">
                                         @foreach($personen as $person)
                                             <li class="col-md-3">
-                                                <figure style="min-height: 337px;"><a href="{{ route('person.show',['id' => $person->getSystemProperties()->getId()]) }}">
+                                                <figure style="min-height: 337px;"><a href="{{ route('person.show',['id' => $person->getSlug()]) }}">
                                                         @if($person->getBild())
                                                             <img src="{{ $person->getBild()->getFile()->getUrl($options) }}" alt="{{ $person->getName() }}">
                                                         @else
@@ -55,7 +64,7 @@
                                                     </a><span></span>
                                                 </figure>
                                                 <div class="ritekhed-player-grid-text">
-                                                    <a href="{{ route('person.show',['id' => $person->getSystemProperties()->getId()]) }}" class="forward-btn">
+                                                    <a href="{{ route('person.show',['id' => $person->getSlug()]) }}" class="forward-btn">
                                                         @if(isset($person->position)) {{ $person->getPosition() }}<br> @endif
                                                         @if(isset($person->team))
                                                             @foreach($person->team as $team)
@@ -63,7 +72,7 @@
                                                             @endforeach
                                                         @endif
                                                     </a>
-                                                    <h5><a href="{{ route('person.show',['id' => $person->getSystemProperties()->getId()]) }}">{{ $person->getName() }}</a></h5>
+                                                    <h5><a href="{{ route('person.show',['id' => $person->getSlug()]) }}">{{ $person->getName() }}</a></h5>
                                                 </div>
                                                 <ul class="ritekhed-player-grid-social">
                                                     <li><a href="mailto:{{ $person->eMail }}" class="ritekhed-colorhover fa fa-mail-bulk"></a></li>
@@ -73,17 +82,85 @@
                                     </ul>
                                 </div>
                         @endif
+                        @if(isset($teams))
+                                <div class="ritekhed-player ritekhed-player-grid">
+                                    <ul class="row">
+                                        @if(isset($teams['senioren'])) 
+                                            @foreach($teams['senioren'] as $single_team)
+                                            <li class="col-md-3">
+                                                <figure style="min-height: 180px;"><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">
+                                                        @if($single_team->getBild())
+                                                            <img src="{{ $single_team->getBild()->getFile()->getUrl($options) }}" alt="{{ $single_team->getMannschaft() }}">
+                                                        @else
+                                                            <img src="/extra-images/player-grid-img1.jpg" alt="{{ $single_team->getMannschaft() }}">
+                                                            <div style="min-height: 180px;"></div>
+                                                        @endif
+                                                        <i class="fa fa-link"></i>
+                                                    </a><span></span>
+                                                </figure>
+                                                <div class="ritekhed-player-grid-text">
+                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">                                
+                                                    </a>
+                                                    <h5><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">{{ $single_team->getMannschaft() }}</a></h5>
+                                                </div>                                            
+                                            </li>
+                                            @endforeach
+                                            @foreach($teams['junioren'] as $single_team)
+                                            <li class="col-md-3">
+                                                <figure style="min-height: 180px;"><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">
+                                                        @if($single_team->getBild())
+                                                            <img src="{{ $single_team->getBild()->getFile()->getUrl($options) }}" alt="{{ $single_team->getMannschaft() }}">
+                                                        @else
+                                                            <img src="/extra-images/player-grid-img1.jpg" alt="{{ $single_team->getMannschaft() }}">
+                                                            <div style="min-height: 180px;"></div>
+                                                        @endif
+                                                        <i class="fa fa-link"></i>
+                                                    </a><span></span>
+                                                </figure>
+                                                <div class="ritekhed-player-grid-text">
+                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">                                
+                                                    </a>
+                                                    <h5><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">{{ $single_team->getMannschaft() }}</a></h5>
+                                                </div>                                            
+                                            </li>
+                                            @endforeach
+                                        @else
+                                            @foreach($teams as $single_team)
+                                            <li class="col-md-3">
+                                                <figure style="min-height: 337px;"><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">
+                                                        @if($single_team->getBild())
+                                                            <img src="{{ $single_team->getBild()->getFile()->getUrl($options) }}" alt="{{ $single_team->getMannschaft() }}">
+                                                        @else
+                                                            <img src="/extra-images/player-grid-img1.jpg" alt="{{ $single_team->getMannschaft() }}">
+                                                            <div style="min-height: 262px;"></div>
+                                                        @endif
+                                                        <i class="fa fa-link"></i>
+                                                    </a><span></span>
+                                                </figure>
+                                                <div class="ritekhed-player-grid-text">
+                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">                                
+                                                    </a>
+                                                    <h5><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">{{ $single_team->getMannschaft() }}</a></h5>
+                                                </div>                                            
+                                            </li>
+                                            @endforeach
+                                        @endif
+                                    
+                                    </ul>
+                                </div>
+                        @endif
+
                     </div>
-                    @if($entry->getSystemProperties()->getContentType()->getName() == 'News')
+                    @if($entry->getSystemProperties()->getContentType()->getName() == 'News' && ($entry->getVerknpfung()))
                         <div class="col-md-3">
                             <div class="widget widget_cetagories">
                                 <div class="ritekhed-widget-heading"><h2>Zum Team</h2></div>
-                                <a href="{{ route('team.show',['id' =>  $entry->getVerknpfung()->getId()]) }}">{{ $entry->getVerknpfung()->getMannschaft() }}</a><br>
-                                <br>
+                                    <a href="{{ route('team.show',['id' =>  $entry->getVerknpfung()->getSlug()]) }}">{{ $entry->getVerknpfung()->getMannschaft() }}</a><br>
+                                    <br>
                                 <h3>Trainer</h3>
                                 @foreach($entry->getVerknpfung()->getTrainer() as $trainer)
-                                    <a href="{{ route('person.show',['id' => $trainer->getSystemProperties()->getId()]) }}">{{ $trainer->getName() }}</a><br>
-                                @endforeach
+                                    <a href="{{ route('person.show',['id' => $trainer->getSlug()]) }}">{{ $trainer->getName() }}</a><br>
+                                @endforeach                                
                             </div>
                         </div>
                     @endif

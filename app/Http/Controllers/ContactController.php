@@ -17,11 +17,6 @@ class ContactController extends Controller
     protected $renderer;
     protected $options;
 
-    /**
-     * ContactController constructor.
-     * @param DeliveryClient $client
-     * @param Renderer $renderer
-     */
     public function __construct(DeliveryClient $client, Renderer $renderer)
     {
         $this->client = $client;
@@ -32,9 +27,6 @@ class ContactController extends Controller
         parent::__construct($client);
     }
 
-    /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function index()
     {
         $entry = $this->getSingleEntry('Kontakt');

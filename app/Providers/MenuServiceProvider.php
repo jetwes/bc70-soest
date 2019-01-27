@@ -44,19 +44,19 @@ class MenuServiceProvider extends ServiceProvider
                         ->link(route('schiedsrichter'),'Schiedsrichter')
                         ->link(route('downloads'),'Downloads');
                 })
-                ->submenu('<a class="has-submenu" href="#">Senioren</a>', function (Menu $menu) use($teams_senior) {
+                ->submenu('<a class="has-submenu" href="/teams?kategorie=Senioren">Senioren</a>', function (Menu $menu) use($teams_senior) {
                     $menu
                         ->addClass('sm-nowrap');
                     foreach ($teams_senior as $team)
-                        $menu->link(route('team.show',['id' => $team->getId()]),$team->mannschaft);
+                        $menu->link(route('team.show',['id' => $team->getSlug()]),$team->mannschaft);
                 })
-                ->submenu('<a class="has-submenu" href="#">Junioren</a>', function (Menu $menu) use($teams_junior) {
+                ->submenu('<a class="has-submenu" href="/teams?kategorie=Junioren">Junioren</a>', function (Menu $menu) use($teams_junior) {
                     $menu
                         ->addClass('sm-nowrap');
                     foreach ($teams_junior as $team)
-                        $menu->link(route('team.show',['id' => $team->getId()]),$team->mannschaft);
+                        $menu->link(route('team.show',['id' => $team->getSlug()]),$team->mannschaft);
                 })
-                ->submenu('<a class="has-submenu" href="#">News</a>', function (Menu $menu) {
+                ->submenu('<a class="has-submenu" href="/news">News</a>', function (Menu $menu) {
                     $menu->addClass('sm-nowrap')
                         ->link(route('news.showCategory',['kategorie' => 'Verein']),'Vereinsnews')
                         ->link(route('news.showCategory',['kategorie' => 'Senioren']),'News für Senioren')
@@ -67,7 +67,7 @@ class MenuServiceProvider extends ServiceProvider
                     $menu
                         ->addClass('sm-nowrap');
                     foreach ($camps as $camp)
-                        $menu->link(route('camp.show',['id' => $camp->getId()]),$camp->titel);
+                        $menu->link(route('camp.show',['id' => $camp->getSlug()]),$camp->titel);
                 })
                 ->submenu('<a class="has-submenu" href="#">Academy</a>',function (Menu $menu) {
                     $menu
@@ -79,7 +79,7 @@ class MenuServiceProvider extends ServiceProvider
                 ->submenu('<a class="has-submenu" href="#">Wappen von Soest</a>',function (Menu $menu) use($turniere) {
                     $menu->addClass('sm-nowrap');
                     foreach ($turniere as $turnier)
-                        $menu->link(route('tournament.show',['id' => $turnier->getId()]),$turnier->titel);
+                        $menu->link(route('tournament.show',['id' => $turnier->getSlug()]),$turnier->titel);
                 })
 
                 ->link(route('contact'), 'Kontakt')
