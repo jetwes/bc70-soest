@@ -151,7 +151,7 @@
                         </div>
                         <div class="ritekhed-latest-result-wrap">
                             <div class="ritekhed-latest-result">
-                                <a href="{{ $startseite->getLinkAktionStartseite() }}"></a><img alt="Aktuelle Aktion" src="{{ $startseite->getBildAktionStartseite()->getFile()->getUrl($options) }}">
+                                <a href="{{ $startseite->getlinkAktionStartseite() }}"><img alt="Aktuelle Aktion" src="{{ $startseite->getBildAktionStartseite()->getFile()->getUrl($options) }}"></a>
                             </div>
                         </div>
                     </div>

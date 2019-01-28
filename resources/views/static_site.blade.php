@@ -34,7 +34,7 @@
                         @else
                             <h1 style="font-size: 2em;">{{ $title }}</h1>
                         @endif
-                        @if(isset($entry->bild) && $entry->getBild()->getTitle() != 'news standard.jpg?w=270&h=270&fit=thumb')
+                        @if(isset($entry->bild) && $entry->getBild()->getTitle() != 'Bild News Standard')
                             <figure class="ritekhed-detail-thumb"><img src="{{ $entry->getBild()->getFile()->getUrl($options) }}" alt="{{ $entry->getBild()->getTitle() }}"></figure>
                         @endif
                             @if(isset($picture))
