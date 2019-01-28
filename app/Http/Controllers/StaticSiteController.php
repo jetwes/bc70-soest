@@ -101,7 +101,7 @@ class StaticSiteController extends Controller
         $query = new \Contentful\Delivery\Query();
         $query->setContentType('person');
         $query->where('fields.typ','Trainer');
-        $query->orderBy('fields.name');
+        $query->orderBy('fields.sortierung');
         //->setLocale('*');
         $trainer = $this->client->getEntries($query);
 
