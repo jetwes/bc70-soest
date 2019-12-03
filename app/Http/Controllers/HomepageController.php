@@ -33,7 +33,7 @@ class HomepageController extends Controller
         $query = new \Contentful\Delivery\Query();
         $query->setContentType('news')
             ->orderBy('sys.createdAt',true)
-            ->setLimit(10);
+            ->setLimit(8);
         //->setLocale('*');
         $news = $this->client->getEntries($query);
         $query = new \Contentful\Delivery\Query();
