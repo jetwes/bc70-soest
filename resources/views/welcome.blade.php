@@ -255,34 +255,34 @@
                         <div class="ritekhed-shop ritekhed-shop-grid">
                             <ul class="row">
                                 <li class="col-md-3">
-                                    <figure><a href="https://www.basketballdirekt.de/Hoodie-BC-Soest-royal-gelb-L-ohne-Eigenname"><img src="/images/Hoodie-BC-Soest.jpg" alt="BC70 Hoodie"></a></figure>
+                                    <figure><a href="https://www.basketballdirekt.de/basics-bc-soest-hoodie-unisex-714826.html"><img src="/images/Hoodie-BC-Soest.jpg" alt="BC70 Hoodie"></a></figure>
                                     <div class="ritekhed-shop-grid-text">
-                                        <h2><a href="https://www.basketballdirekt.de/Hoodie-BC-Soest-royal-gelb-L-ohne-Eigenname">BC70 Hoodie</a></h2>
+                                        <h2><a href="https://www.basketballdirekt.de/basics-bc-soest-hoodie-unisex-714826.html">BC70 Hoodie</a></h2>
                                         <span class="price-cart"><del></del> €24.95</span>
                                         <p>80% Baumwolle/20% Polyester</p>
                                     </div>
                                 </li>
                                 <li class="col-md-3">
-                                    <figure><a href="https://www.basketballdirekt.de/I-Love-BC-Baumwollshirt-grau-M-ohne-Eigenname"><img src="/images/T-Shirt-I-Love-BC.jpg" alt="T Shirt I love BC70 grau"></a></figure>
+                                    <figure><a href="https://www.basketballdirekt.de/basics-bc-soest-t-shirt-unisex-714854.html"><img src="/images/T-Shirt-I-Love-BC.jpg" alt="T Shirt I love BC70 grau"></a></figure>
                                     <div class="ritekhed-shop-grid-text">
-                                        <h2><a href="https://www.basketballdirekt.de/I-Love-BC-Baumwollshirt-grau-M-ohne-Eigenname">I love BC70 Shirt</a></h2>
+                                        <h2><a href="https://www.basketballdirekt.de/basics-bc-soest-t-shirt-unisex-714854.html">I love BC70 Shirt</a></h2>
                                         <span class="price-cart"><del></del> €14.95</span>
                                         <p>Baumwoll-Shirt mit großem I Love BC70 Motiv auf der Brust.
                                         </p>
                                     </div>
                                 </li>
                                 <li class="col-md-3">
-                                    <figure><a href="https://www.basketballdirekt.de/Damen-Funktionsshirt-BC-Soest-weiss-L-mit-Eigenname"><img src="https://www.basketballdirekt.de/bilder/produkte/gross/Damen-Funktionsshirt-BC-Soest-royal-M-mit-Eigenname.jpg" alt="Damen Funktionsshirt"></a></figure>
+                                    <figure><a href="https://www.basketballdirekt.de/basics-bc-soest-funktionsshirt-damen-damen-714837.html"><img src="https://cdn.basketballdirekt.de/full/BSJC005BCSO-weiss.jpg" alt="Damen Funktionsshirt"></a></figure>
                                     <div class="ritekhed-shop-grid-text">
-                                        <h2><a href="https://www.basketballdirekt.de/Damen-Funktionsshirt-BC-Soest-weiss-L-mit-Eigenname">Damen Funktionsshirt</a></h2>
+                                        <h2><a href="https://www.basketballdirekt.de/basics-bc-soest-funktionsshirt-damen-damen-714837.html">Damen Funktionsshirt</a></h2>
                                         <span class="price-cart"><del></del> €20.95</span>
                                         <p>Damen Shirt aus mit großem Vereinsmotiv auf der Brust.
                                         </p>
                                     </div>
                                 </li><li class="col-md-3">
-                                    <figure><a href="https://www.basketballdirekt.de/Shootingshirt-Sublimation-BC-Soest-royal-M"><img src="https://www.basketballdirekt.de/bilder/produkte/gross/Shootingshirt-Sublimation-BC-Soest.jpg" alt="Shooting-Shirt"></a></figure>
+                                    <figure><a href="https://www.basketballdirekt.de/spalding-bc-soest-move-shooting-shirt-ls-unisex-714896.html"><img src="https://cdn.basketballdirekt.de/full/SP3002142BCSO-01.jpg" alt="Shooting-Shirt"></a></figure>
                                     <div class="ritekhed-shop-grid-text">
-                                        <h2><a href="https://www.basketballdirekt.de/Shootingshirt-Sublimation-BC-Soest-royal-M">Shooting Shirt</a></h2>
+                                        <h2><a href="https://www.basketballdirekt.de/spalding-bc-soest-move-shooting-shirt-ls-unisex-714896.html">Shooting Shirt</a></h2>
                                         <span class="price-cart"><del></del> €34.95</span>
                                         <p>Basketball Shootingshirt mit V-Ausschnitt im offiziellen BC Soest Layout.
                                         </p>
