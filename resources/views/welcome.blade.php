@@ -26,7 +26,7 @@
             <img src="/images/mock.jpg" width="100%" alt="">
             <div class="ritekhed-banner-caption">
                 <div class="container">
-                    <h1><strong class="ritekhed-color">Gemeinsam</strong> erfolgreich, <strong class="ritekhed-color">Gemeinsam</strong> stark!</h1>
+                    <h1 style="margin-left: 25%;"><strong class="ritekhed-color">Gemeinsam</strong> erfolgreich, <strong class="ritekhed-color">Gemeinsam</strong> stark!</h1>
                     <div class="clearfix"></div>
                     <p>Wir hoffen, Soest zu einem immer stärkeren Basketballstandort machen zu können und den Spielern unseres Vereins, Training auf hohem Niveau, mit trotzdem sehr familiärem Charakter zu ermöglichen.</p>
                     <div class="clearfix"></div>
@@ -275,7 +275,7 @@
                                     <figure><a href="https://www.basketballdirekt.de/basics-bc-soest-funktionsshirt-damen-damen-714837.html"><img src="https://cdn.basketballdirekt.de/full/BSJC005BCSO-weiss.jpg" alt="Damen Funktionsshirt"></a></figure>
                                     <div class="ritekhed-shop-grid-text">
                                         <h2><a href="https://www.basketballdirekt.de/basics-bc-soest-funktionsshirt-damen-damen-714837.html">Damen Funktionsshirt</a></h2>
-                                        <span class="price-cart"><del></del> €20.95</span>
+                                        <span class="price-cart"><del></del> €14.95</span>
                                         <p>Damen Shirt aus mit großem Vereinsmotiv auf der Brust.
                                         </p>
                                     </div>
@@ -283,7 +283,7 @@
                                     <figure><a href="https://www.basketballdirekt.de/spalding-bc-soest-move-shooting-shirt-ls-unisex-714896.html"><img src="https://cdn.basketballdirekt.de/full/SP3002142BCSO-01.jpg" alt="Shooting-Shirt"></a></figure>
                                     <div class="ritekhed-shop-grid-text">
                                         <h2><a href="https://www.basketballdirekt.de/spalding-bc-soest-move-shooting-shirt-ls-unisex-714896.html">Shooting Shirt</a></h2>
-                                        <span class="price-cart"><del></del> €34.95</span>
+                                        <span class="price-cart"><del></del> €22.95</span>
                                         <p>Basketball Shootingshirt mit V-Ausschnitt im offiziellen BC Soest Layout.
                                         </p>
                                     </div>
