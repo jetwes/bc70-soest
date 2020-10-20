@@ -86,7 +86,10 @@ class StaticSiteController extends Controller
             abort(404);
         }
 
-        $picture = $this->client->getAsset('tfinEcnvrVHr6Bs9r8MsQ');
+        $picture = $entry->getBildAktionStartseite();
+        //dd($picture->getFile()->getUrl());
+
+       // $picture = $this->client->getAsset('tfinEcnvrVHr6Bs9r8MsQ');
 
         return view('static_site',['title' => $entry->getTitel(),'entry' => $entry,'renderer' => $this->renderer,'options' => $this->options,'picture' => $picture]);
     }
