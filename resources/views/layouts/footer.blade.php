@@ -15,6 +15,11 @@
                         <li><i class="fa fa-phone"></i> <span>59494 Soest</span></li>
                         <li><i class="far fa-envelope"></i> <span><a href="mailto:info@bc70-soest.de">info@bc70-soest.de</a></span></li>
                     </ul>
+                    <div class="bg-white ritekhed-info-list" style="margin-top: 20px; padding: 10px;">
+                        <h2 class="text-lg-left">Unterstütze den BC70 und setze den BC70 als Organisation bei amazon smile </h2>
+                        <a href="https://smile.amazon.de/ch/343-584-61674"><img src="/images/Amazon-Smile-01.png" alt="Amazon Smile"></a>
+                    </div>
+
                 </aside>
                 <!-- Widget Footer About -->
                 <!-- Widget Featured News -->
