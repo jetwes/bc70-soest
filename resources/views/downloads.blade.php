@@ -25,7 +25,7 @@
                                             </div>
                                             <div class="ritekhed-buy-ticket">
                                                 <div class="ritekhed-buy-ticket-text">
-                                                    <h5>{{ $entry->getTitel() }}</h5>
+                                                    <h5 href="{{ $entry->getDatei()->getFile()->getUrl() }}">{{ $entry->getTitel() }}</h5>
                                                     <time datetime="{{ $entry->getSystemProperties()->getCreatedAt()->format('d.m.Y') }}">{{ $entry->getSystemProperties()->getCreatedAt()->format('d.m.Y') }}</time>
                                                 </div>
                                                 <a href="{{ $entry->getDatei()->getFile()->getUrl() }}" title="{{ $entry->getTitel() }}" class="ticket-buy-btn">Download</a>
