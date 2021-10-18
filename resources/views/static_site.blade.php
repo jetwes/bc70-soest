@@ -42,12 +42,27 @@
                             @endif
                         @if($entry->getTitel() == 'Kontakt')
                             <div class="ritekhed-map">
-                                <iframe src="https://www.google.com/maps/place/Pollhofstra%C3%9Fe,+59494+Soest/@51.5681025,8.1090563,18.35z/data=!4m5!3m4!1s0x47b962b5f2a507ab:0xa0962eb216960d9a!8m2!3d51.5682636!4d8.1099647" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1240.0035735179133!2d8.1090563!3d51.5681025!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b962b5f2a507ab%3A0xa0962eb216960d9a!2sPollhofstra%C3%9Fe%2C%2059494%20Soest!5e0!3m2!1sde!2sde!4v1634556452495!5m2!1sde!2sde" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                         @endif
                         <div class="ritekhed-rich-editor">
                             {!! $renderer->render($entry->getInhalt()) !!}
                         </div>
+                            @if($entry->getBilder())
+                                <h2>Bildergallerie</h2>
+                                <div class="ritekhed-gallery ritekhed-gallery-classic">
+                                    <ul class="row">
+                                        @foreach($entry->getBilder() as $picture)
+                                            <li class="col-md-4">
+                                                <a data-fancybox-group="group" href="{{ $picture->getFile()->getUrl() }}" class="fancybox"><img src="{{ $picture->getFile()->getUrl($options) }}" alt="{{ $picture->getTitle() }}"></a>
+                                                <div class="ritekhed-gallery-classic-text">
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+
+                            @endif
                         @if(isset($personen) && $personen->count() > 0)
                                 <div class="ritekhed-player ritekhed-player-grid">
                                     <ul class="row">
