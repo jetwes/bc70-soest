@@ -8,7 +8,7 @@
         {{ str_limit($entry->getVorschau(),150) }}
     @endif
     @if($entry->getSystemProperties()->getContentType()->getName() == 'Seite')
-        {{ str_limit(strip_tags($renderer->render($entry->getInhalt())), $limit = 150, $end = '...') }}    
+        {{ str_limit(strip_tags($renderer->render($entry->getInhalt())), $limit = 150, $end = '...') }}
     @endif
 @stop
 
@@ -42,7 +42,7 @@
                             @endif
                         @if($entry->getTitel() == 'Kontakt')
                             <div class="ritekhed-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.6832515045476!2d8.093541416438459!3d51.57403997964615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b97d2d4683a1ed%3A0xc1cdc151876f0e1d!2sHubertus-Schwartz-Berufskolleg!5e0!3m2!1sde!2sde!4v1548258929455" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe src="https://www.google.com/maps/place/Pollhofstra%C3%9Fe,+59494+Soest/@51.5681025,8.1090563,18.35z/data=!4m5!3m4!1s0x47b962b5f2a507ab:0xa0962eb216960d9a!8m2!3d51.5682636!4d8.1099647" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                         @endif
                         <div class="ritekhed-rich-editor">
@@ -85,7 +85,7 @@
                         @if(isset($teams))
                                 <div class="ritekhed-player ritekhed-player-grid">
                                     <ul class="row">
-                                        @if(isset($teams['senioren'])) 
+                                        @if(isset($teams['senioren']))
                                             @foreach($teams['senioren'] as $single_team)
                                             <li class="col-md-3">
                                                 <figure style="min-height: 180px;"><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">
@@ -99,10 +99,10 @@
                                                     </a><span></span>
                                                 </figure>
                                                 <div class="ritekhed-player-grid-text">
-                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">                                
+                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">
                                                     </a>
                                                     <h5><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">{{ $single_team->getMannschaft() }}</a></h5>
-                                                </div>                                            
+                                                </div>
                                             </li>
                                             @endforeach
                                             @foreach($teams['junioren'] as $single_team)
@@ -118,10 +118,10 @@
                                                     </a><span></span>
                                                 </figure>
                                                 <div class="ritekhed-player-grid-text">
-                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">                                
+                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">
                                                     </a>
                                                     <h5><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">{{ $single_team->getMannschaft() }}</a></h5>
-                                                </div>                                            
+                                                </div>
                                             </li>
                                             @endforeach
                                         @else
@@ -138,14 +138,14 @@
                                                     </a><span></span>
                                                 </figure>
                                                 <div class="ritekhed-player-grid-text">
-                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">                                
+                                                    <a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}" class="forward-btn">
                                                     </a>
                                                     <h5><a href="{{ route('team.show',['id' => $single_team->getSlug()]) }}">{{ $single_team->getMannschaft() }}</a></h5>
-                                                </div>                                            
+                                                </div>
                                             </li>
                                             @endforeach
                                         @endif
-                                    
+
                                     </ul>
                                 </div>
                         @endif
@@ -160,7 +160,7 @@
                                 <h3>Trainer</h3>
                                 @foreach($entry->getVerknpfung()->getTrainer() as $trainer)
                                     <a href="{{ route('person.show',['id' => $trainer->getSlug()]) }}">{{ $trainer->getName() }}</a><br>
-                                @endforeach                                
+                                @endforeach
                             </div>
                         </div>
                     @endif
