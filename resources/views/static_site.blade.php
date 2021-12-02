@@ -48,7 +48,7 @@
                         <div class="ritekhed-rich-editor">
                             {!! $renderer->render($entry->getInhalt()) !!}
                         </div>
-                            @if($entry->getBilder())
+                            @if(isset($entry->bilder) && $entry->getBilder())
                                 <h2>Bildergallerie</h2>
                                 <div class="ritekhed-gallery ritekhed-gallery-classic">
                                     <ul class="row">
