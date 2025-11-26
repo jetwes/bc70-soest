@@ -122,6 +122,7 @@
                 <div class="row">
 
                     <!-- Result -->
+                    <!--
                     <div class="@if($startseite->bildAktionStartseite) col-md-6 @else col-md-12 @endif">
                         <div class="ritekhed-classic-heading">
                             <h2>Nächstes Turnier</h2>
@@ -141,6 +142,37 @@
                             <a href="#" class="ritekhed-ticket-button ritekhed-bgcolor">Wappen von Soest 2019</a>
                         </div>
                     </div>
+                    -->
+                    @if(\Carbon\Carbon::now() < \Carbon\Carbon::create(2023,4,1))
+                    <div class="col-md-6">
+                        <div class="ritekhed-classic-heading">
+                            <h2>Ticketshop</h2>
+                        </div>
+                        <div class="ritekhed-latest-result-wrap">
+                            <div class="ritekhed-latest-result">
+                                <a href="https://bc70-soest.vereinsticket.de"><img alt="Zum Ticketshop" src="/images/vereinsticket.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    @else
+                    <div class="col-md-6">
+                        <div class="ritekhed-classic-heading">
+                            <h2>Wappen von Soest</h2>
+                        </div>
+                        <div class="ritekhed-latest-result-wrap">
+                             <ul class="ritekhed-team-matches">
+                                <li>
+                                    <a href="#"><img src="/extra-images/next-match-1.png" alt=""> <span></span></a>
+                                </li>
+                                <li><small>Termin</small>
+                                    <time class="ritekhed-color" datetime="">19.08.2023 - 20.08.2023</time> <small></small></li>
+                                <li>
+                                    <a href="#"><img src="/extra-images/next-match-2.png" alt=""> <span></span></a>
+                                </li>
+                            </ul>                        
+                        </div>
+                    </div>
+                    @endif
                     <!-- Result -->
 
                     <!-- Result -->
@@ -267,7 +299,25 @@
                                     <div class="ritekhed-shop-grid-text">
                                         <h2><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-casuals-kapuzenjacke-schwarz-f03-nr-team-1081457">Puma Hoodie</a></h2>
                                         <span class="price-cart"><del></del> €40.72 UVP</span>
-                                        <p>Baumwoll-Shirt mit großem I Love BC70 Motiv auf der Brust.
+                                        <p>100% Baumwolle
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="col-md-3">
+                                    <figure><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-casual-trainingsjacke-blau-weiss-f02-nr-team-1087656"><img src="/images/puma-jacke-blau.webp" alt="Puma Jacke"></a></figure>
+                                    <div class="ritekhed-shop-grid-text">
+                                        <h2><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-casual-trainingsjacke-blau-weiss-f02-nr-team-1087656">Puma Jacke blau</a></h2>
+                                        <span class="price-cart"><del></del> €43.97 UVP</span>
+                                        <p>100% Polyester
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="col-md-3">
+                                    <figure><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-casuals-sweatshirt-schwarz-f03-nr-team-1086336"><img src="/images/puma-sweater.webp" alt="Puma Sweater"></a></figure>
+                                    <div class="ritekhed-shop-grid-text">
+                                        <h2><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-casuals-sweatshirt-schwarz-f03-nr-team-1086336">Puma Sweater</a></h2>
+                                        <span class="price-cart"><del></del> €43.22 UVP</span>
+                                        <p>100% Baumwolle
                                         </p>
                                     </div>
                                 </li>
