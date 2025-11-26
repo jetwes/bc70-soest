@@ -255,36 +255,19 @@
                         <div class="ritekhed-shop ritekhed-shop-grid">
                             <ul class="row">
                                 <li class="col-md-3">
-                                    <figure><a href="https://www.basketballdirekt.de/basics-bc-soest-hoodie-unisex-714826.html"><img src="/images/Hoodie-BC-Soest.jpg" alt="BC70 Hoodie"></a></figure>
+                                    <figure><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-sporttasche-gr-m-blau-f02-nr-team-1084532"><img src="/images/puma-tasche.webp" alt="Puma Tasche"></a></figure>
                                     <div class="ritekhed-shop-grid-text">
-                                        <h2><a href="https://www.basketballdirekt.de/basics-bc-soest-hoodie-unisex-714826.html">BC70 Hoodie</a></h2>
-                                        <span class="price-cart"><del></del> €24.95</span>
-                                        <p>80% Baumwolle/20% Polyester</p>
+                                        <h2><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-sporttasche-gr-m-blau-f02-nr-team-1084532">Puma Tasche</a></h2>
+                                        <span class="price-cart"><del></del> €37.22 UVP</span>
+                                        <p>100% Polyester</p>
                                     </div>
                                 </li>
                                 <li class="col-md-3">
-                                    <figure><a href="https://www.basketballdirekt.de/basics-bc-soest-t-shirt-unisex-714854.html"><img src="/images/T-Shirt-I-Love-BC.jpg" alt="T Shirt I love BC70 grau"></a></figure>
+                                    <figure><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-casuals-kapuzenjacke-schwarz-f03-nr-team-1081457"><img src="/images/puma-hoodie.webp" alt="Puma Hoodie"></a></figure>
                                     <div class="ritekhed-shop-grid-text">
-                                        <h2><a href="https://www.basketballdirekt.de/basics-bc-soest-t-shirt-unisex-714854.html">I love BC70 Shirt</a></h2>
-                                        <span class="price-cart"><del></del> €14.95</span>
+                                        <h2><a href="https://www.11teamsports.com/de-de/p/puma-teamgoal-casuals-kapuzenjacke-schwarz-f03-nr-team-1081457">Puma Hoodie</a></h2>
+                                        <span class="price-cart"><del></del> €40.72 UVP</span>
                                         <p>Baumwoll-Shirt mit großem I Love BC70 Motiv auf der Brust.
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="col-md-3">
-                                    <figure><a href="https://www.basketballdirekt.de/basics-bc-soest-funktionsshirt-damen-damen-714837.html"><img src="https://cdn.basketballdirekt.de/full/BSJC005BCSO-weiss.jpg" alt="Damen Funktionsshirt"></a></figure>
-                                    <div class="ritekhed-shop-grid-text">
-                                        <h2><a href="https://www.basketballdirekt.de/basics-bc-soest-funktionsshirt-damen-damen-714837.html">Damen Funktionsshirt</a></h2>
-                                        <span class="price-cart"><del></del> €14.95</span>
-                                        <p>Damen Shirt aus mit großem Vereinsmotiv auf der Brust.
-                                        </p>
-                                    </div>
-                                </li><li class="col-md-3">
-                                    <figure><a href="https://www.basketballdirekt.de/spalding-bc-soest-move-shooting-shirt-ls-unisex-714896.html"><img src="https://cdn.basketballdirekt.de/full/SP3002142BCSO-01.jpg" alt="Shooting-Shirt"></a></figure>
-                                    <div class="ritekhed-shop-grid-text">
-                                        <h2><a href="https://www.basketballdirekt.de/spalding-bc-soest-move-shooting-shirt-ls-unisex-714896.html">Shooting Shirt</a></h2>
-                                        <span class="price-cart"><del></del> €22.95</span>
-                                        <p>Basketball Shootingshirt mit V-Ausschnitt im offiziellen BC Soest Layout.
                                         </p>
                                     </div>
                                 </li>
